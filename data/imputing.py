@@ -6,8 +6,8 @@ Created on Mon Apr 22 00:25:44 2024
 """
 
 import pandas as pd
-import numpy as np
 from sklearn.impute import KNNImputer
-data = pd.read_csv("C:\\Users\\bheal\\anaconda3\\envs\\myConda\\Data\\ckd_Numerical.csv",header=0)
+
+data = pd.read_csv("ckd_numerical.csv", header=0)
 imputer = KNNImputer(n_neighbors=5)
 Final = imputer.fit_transform(data)
